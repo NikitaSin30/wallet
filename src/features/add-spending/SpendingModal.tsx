@@ -1,15 +1,14 @@
 import React, { SyntheticEvent } from 'react';
 import { useForm } from 'react-hook-form';
-import { CategoriesStore } from 'shared/store/CategoriesStore';
-import { CashFlowStore } from 'shared/store/CashFlowStore';
-import { ICategorie } from 'shared/store/interfaces/interfaces';
+import { CategoriesStore } from 'shared/store/categoriesStore/CategoriesStore';
+import { ICategorie } from 'shared/store/categoriesStore/interfaces/interfaces';
 import { IFormSpending } from 'features/add-spending/interfaces/interfaces';
 import { Select } from 'widgets/select/Select';
 import { Input } from 'widgets/inputs/Input';
 import { Button } from 'widgets/modals/ui/button/Button';
 import { CloseIcon } from 'widgets/modals/assets/CloseIcon';
 import { IModal } from 'widgets/modals/interfaces/interfaces';
-
+import { spendingStore } from 'shared/store/cashFlowStore/SpendingStore';
 
 
 const SpendingModal = (props: IModal) => {
@@ -41,7 +40,7 @@ const SpendingModal = (props: IModal) => {
     }
 
     function setNewSpending(spentMoney: number, spending: ICategorie) {
-        CashFlowStore.setSpending(spentMoney);
+        spendingStore.setSpending(spentMoney);
         CategoriesStore.setNewSpandingInCategorie(spending);
     }
 

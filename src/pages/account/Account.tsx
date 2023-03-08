@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate } from 'react-router';
 import { Context } from 'shared/context/context';
 import { GlobalContext } from 'shared/context/context';
-import { UserStore } from 'shared/store/UserStore';
+import { UserStore } from 'shared/store/userStore/UserStore';
 
 
 

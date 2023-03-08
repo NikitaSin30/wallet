@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react-lite';
 import { ToDoItem } from '../todoItem/TodoItem';
-import { ToDoStore } from 'shared/store/ToDoStore';
+import { ToDoStore } from 'shared/store/toDoStore/ToDoStore';
 
 
 

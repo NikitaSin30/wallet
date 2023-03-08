@@ -1,4 +1,4 @@
-import { ICategorie } from 'shared/store/interfaces/interfaces';
+import { ICategorie } from 'shared/store/categoriesStore/interfaces/interfaces';
 import { UseFormRegister } from 'react-hook-form';
 
 

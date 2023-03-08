@@ -1,7 +1,7 @@
 import React from 'react';
-import { CategoriesStore } from 'shared/store/CategoriesStore';
+import { CategoriesStore } from 'shared/store/categoriesStore/CategoriesStore';
 import { DeleteModal } from 'widgets/modals/DeleteModal';
-import { ICategorie } from 'shared/store/interfaces/interfaces';
+import { ICategorie } from 'shared/store/categoriesStore/interfaces/interfaces';
 import { observer } from 'mobx-react-lite';
 import { DeleteIcon } from 'widgets/todo/assets/DeleteIcon';
 

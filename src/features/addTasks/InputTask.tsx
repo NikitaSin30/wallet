@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { ITaskForm , IInputTask } from './interfaces/interfaces';
-import { ToDoStore } from 'shared/store/ToDoStore';
+import { ToDoStore } from 'shared/store/toDoStore/ToDoStore';
 
 
 

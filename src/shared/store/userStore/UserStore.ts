@@ -1,5 +1,5 @@
 import { action, makeObservable, observable } from 'mobx';
-import { IUser } from './interfaces/interfaces';
+import { IUser } from './interfaces.ts/interfaces';
 
 export class User implements IUser {
     user = { email: '' };

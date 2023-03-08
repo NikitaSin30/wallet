@@ -1,12 +1,8 @@
 import { action, makeObservable, observable } from 'mobx';
-import { ICategorie } from './interfaces/interfaces';
+import { ICategories,ICategorie } from './interfaces/interfaces';
 
 
-interface ICategories {
-  categories: Array<ICategorie>;
-  setCatigorie(categorie:ICategorie) : void
-  removeCategorie(id:string) :void
-}
+
 
 class Categories implements ICategories {
     categories: Array<ICategorie> = [];

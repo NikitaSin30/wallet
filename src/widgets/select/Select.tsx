@@ -12,7 +12,7 @@ export const Select = (props:ISelect) => {
         selected,
         labelTitle,
     } = props;
-    
+
     const style = isActiveSelect ? 'block' : 'hidden';
 
     return (
@@ -27,6 +27,7 @@ export const Select = (props:ISelect) => {
                     {categories?.map(({ categorie }) => {
                         return (
                             <li
+                                key={categorie}
                                 className="bg-white cursor-pointer  h-8
                          text-black font-semibold rounded-md shadow-lg px-2 py-1 border-solid border-b-2 hover:bg-slate-500 hover:text-white"
                                 onClick={() => getValueSelect(categorie)}

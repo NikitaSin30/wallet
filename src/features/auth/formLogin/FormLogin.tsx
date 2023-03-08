@@ -6,7 +6,7 @@ import { Context } from 'shared/context/context';
 import { Navigate } from 'react-router-dom';
 import { GlobalContext } from 'shared/context/context';
 import { IFormAuth } from 'features/auth/interfaces/interfaces';
-import { UserStore } from 'shared/store/UserStore';
+import { UserStore } from 'shared/store/userStore/UserStore';
 
 
 

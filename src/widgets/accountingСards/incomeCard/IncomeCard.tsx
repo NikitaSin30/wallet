@@ -1,11 +1,10 @@
 import React from 'react';
 import { IncomeIcon } from 'pages/main/assets/IncomeIcon';
 import ModalIncome from 'features/add-income/ModalIncome';
-import { CashFlowStore } from 'shared/store/CashFlowStore';
 import { observer } from 'mobx-react-lite';
 import { CardItem } from '../CardItem/CardItem';
 import { ETitleCard } from 'shared/enums/enums';
-
+import { incomeStore } from 'shared/store/cashFlowStore/IncomeStore';
 
 
 export const IncomeCard = observer(() => {
@@ -17,12 +16,12 @@ export const IncomeCard = observer(() => {
     }
 
     const { incomeCard } = ETitleCard;
-    const { incomeCash } = CashFlowStore;
+    const { income } = incomeStore;
 
 
     return (
         <>
-            <CardItem switchShowModal={switchModalActive} title={incomeCard} money={incomeCash} iconCard={IncomeIcon} />
+            <CardItem switchShowModal={switchModalActive} title={incomeCard} money={income} iconCard={IncomeIcon} />
             <ModalIncome isModalActive={isModalActive} switchShowModal={switchModalActive} />
         </>
     );

@@ -1,4 +1,4 @@
-import { CategoriesStore } from 'shared/store/CategoriesStore';
+import { CategoriesStore } from 'shared/store/categoriesStore/CategoriesStore';
 import { CategorieItem } from '../categorieItem/CategorieItem';
 import { observer } from 'mobx-react-lite';
 

@@ -1,13 +1,12 @@
 import React, { SyntheticEvent } from 'react';
 import { useForm } from 'react-hook-form';
-import { CashFlowStore } from 'shared/store/CashFlowStore';
 import { IFormAccumulation } from './interfaces/interfaces';
 import { Input } from 'widgets/inputs/Input';
 import { Button } from 'widgets/modals/ui/button/Button';
 import { CloseIcon } from 'widgets/modals/assets/CloseIcon';
 import { IModal } from 'widgets/modals/interfaces/interfaces';
-
-
+import { accumulationStore } from 'shared/store/cashFlowStore/AccumulationStore';
+import { balanceStore } from 'shared/store/cashFlowStore/BalanceStore';
 
 function AccumulationModal(props: IModal): React.ReactElement {
     const { switchShowModal, switchShowModalErr, isModalActive } = props;
@@ -25,7 +24,7 @@ function AccumulationModal(props: IModal): React.ReactElement {
     }
 
     function checkHasMoneyForAccumulation(sum: number) {
-        if (CashFlowStore.moneyAccount < sum) return showModalError();
+        if (balanceStore.moneyAccount < sum) return showModalError();
 
         addAccumulation(sum);
     }
@@ -37,7 +36,7 @@ function AccumulationModal(props: IModal): React.ReactElement {
     }
 
     function addAccumulation(sum: number) {
-        CashFlowStore.setAccumulation(sum);
+        accumulationStore.setAccumulation(sum);
         reset();
         switchShowModal();
     }

@@ -4,7 +4,7 @@ import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { Context, GlobalContext } from 'shared/context/context';
 import { Navigate } from 'react-router';
 import { IFormAuth } from 'features/auth/interfaces/interfaces';
-import { UserStore } from 'shared/store/UserStore';
+import { UserStore } from 'shared/store/userStore/UserStore';
 
 
 

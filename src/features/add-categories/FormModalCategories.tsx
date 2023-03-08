@@ -1,6 +1,6 @@
 import { SyntheticEvent } from 'react';
 import { useForm } from 'react-hook-form';
-import { CategoriesStore } from 'shared/store/CategoriesStore';
+import { CategoriesStore } from 'shared/store/categoriesStore/CategoriesStore';
 import { IFormCategorie } from './interfaces/interfaces';
 import { Button } from 'widgets/modals/ui/button/Button';
 import { Input } from 'widgets/inputs/Input';

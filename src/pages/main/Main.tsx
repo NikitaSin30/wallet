@@ -11,6 +11,7 @@ import { AnalysisGraphs } from 'widgets/analysisGraphs/AnalysisGraphs';
 
 
 
+
 const Main = () => {
     const { isLogin } = React.useContext<GlobalContext>(Context);
 
